@@ -41,7 +41,7 @@ The app will start on `http://localhost:5173`
 ### WebSocket Endpoint
 
 ```
-ws://localhost:8080/ws?username=<username>&channel=<channel>
+ws://localhost:8080/ws?username=${encodeURIComponent(username)}&channel=${encodeURIComponent(channel)}
 ```
 
 ### Message Format (Client to Server)
@@ -49,7 +49,7 @@ ws://localhost:8080/ws?username=<username>&channel=<channel>
 ```json
 {
   "type": "message",
-  "content": "Hello World!",
+  "content": "Welcome to the chat!",
   "channel": "general"
 }
 ```
@@ -114,5 +114,3 @@ npm install
 ```
 
 ---
-
-**Happy coding! 🚀**
